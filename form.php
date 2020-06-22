@@ -8,8 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
    
     $servername = "localhost";
     $username = "root";
-    $passward = "";
-    $database = "contact";
+    $passward = "shravan@12345";
+    $database = "db_form";
 
     //create a connection
     $conn = mysqli_connect($servername, $username, $passward, $database);
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     else{
         echo "Successfully";
     
-   $sql = "INSERT INTO `contact`(`name`, `email`, `disc`, `dt`) VALUES ('$name','$email','$disc', current_timestamp())";
+   $sql = "INSERT INTO `form`(`name`, `email`, `disc`, `dt`) VALUES ('$name','$email','$disc', current_timestamp())";
    $result = mysqli_query($conn, $sql);
 
    if($result){
